@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
 import { PortfolioCarousel } from "./components/PortfolioCarousel";
 import { Services } from "./components/Services";
 import { About } from "./components/About";
@@ -12,7 +11,6 @@ function App() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Header />
-      <Hero />
       <PortfolioCarousel />
       <Services />
       <About />

@@ -1,12 +1,7 @@
-import {
-  Typography,
-  Container,
-  Box,
-  Stack,
-  Card,
-  CardContent,
-} from "@mui/material";
+import { Typography, Container, Box, Stack } from "@mui/material";
 import { FormatPaint, Brush, GridOn } from "@mui/icons-material";
+
+import { InfoCard } from "./common/InfoCard";
 
 export function Services() {
   const services = [
@@ -28,11 +23,17 @@ export function Services() {
       description:
         "High-quality tiling for kitchens, bathrooms, and all living spaces.",
     },
+    {
+      icon: <GridOn sx={{ fontSize: 40, color: "secondary.main" }} />,
+      title: "Repairs",
+      description:
+        "Plaster repairs, surface preparation. Woodwork repairs & finishing. Property maintenance & general repairs.",
+    },
   ];
 
   return (
     <Box sx={{ bgcolor: "grey.50", py: 8 }}>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Typography variant="h3" component="h2" textAlign="center" gutterBottom>
           Our Services
         </Typography>
@@ -42,8 +43,8 @@ export function Services() {
           color="text.secondary"
           sx={{ mb: 6 }}
         >
-          Professional painting, decorating, and tiling for residential and
-          commercial clients
+          Professional painting, decorating, tiling and repairs for residential
+          and commercial clients
         </Typography>
 
         <Stack
@@ -52,34 +53,12 @@ export function Services() {
           justifyContent="center"
         >
           {services.map((service, index) => (
-            <Card
+            <InfoCard
               key={index}
-              sx={{
-                flex: 1,
-                maxWidth: { sm: 300 },
-                display: "flex",
-                flexDirection: "column",
-                textAlign: "center",
-                p: 2,
-                border: (theme) => `2px solid ${theme.palette.grey[50]}`,
-                "&:hover": {
-                  border: (theme) =>
-                    `2px solid ${theme.palette.secondary.main}`,
-                  transform: "translateY(-4px)",
-                  transition: "all 0.3s ease",
-                },
-              }}
-            >
-              <CardContent>
-                <Box sx={{ mb: 2 }}>{service.icon}</Box>
-                <Typography variant="h6" component="h3" gutterBottom>
-                  {service.title}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {service.description}
-                </Typography>
-              </CardContent>
-            </Card>
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+            />
           ))}
         </Stack>
       </Container>

@@ -3,7 +3,7 @@ import { Typography, Container, Box, Stack, Divider } from "@mui/material";
 export function Footer() {
   return (
     <Box sx={{ bgcolor: "text.primary", color: "white", py: 4 }}>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Divider sx={{ mb: 4, bgcolor: "rgba(255,255,255,0.2)" }} />
         <Stack
           direction={{ xs: "column", md: "row" }}
@@ -15,8 +15,8 @@ export function Footer() {
               Nuthatch Painting & Decorating
             </Typography>
             <Typography variant="body2" sx={{ mb: 2 }}>
-              Your trusted local experts for painting, decorating, and tiling
-              services.
+              Your trusted local experts for painting, decorating, tiling and
+              repair services.
             </Typography>
           </Box>
           <Box sx={{ flex: 1 }}>
