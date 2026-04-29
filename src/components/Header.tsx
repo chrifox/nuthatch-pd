@@ -41,6 +41,8 @@ export function Header() {
                 Get Free Quote
               </Button>
               <Button
+                component="a"
+                href="tel:07401818282"
                 variant="outlined"
                 size="large"
                 sx={{
