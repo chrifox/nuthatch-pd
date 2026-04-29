@@ -3,17 +3,20 @@ import { Box, Card, CardContent, Typography } from "@mui/material";
 type InfoCardProps = {
   title: string;
   description: string;
+  action?: () => void;
   icon?: React.ReactNode;
 };
 
 export function InfoCard({
   title,
   description,
+  action,
   icon,
   ...cardProps
 }: InfoCardProps) {
   return (
     <Card
+      onClick={action}
       {...cardProps}
       sx={{
         flex: 1,

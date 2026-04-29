@@ -1,5 +1,7 @@
 import { Typography, Container, Box, Stack, Divider } from "@mui/material";
 
+import InstagramIcon from "../assets/Instagram_icon.png";
+
 export function Footer() {
   return (
     <Box sx={{ bgcolor: "text.primary", color: "white", py: 4 }}>
@@ -24,12 +26,19 @@ export function Footer() {
               Business Hours
             </Typography>
             <Typography variant="body2">
-              Mon - Fri: 7:00 AM - 6:00 PM
-              <br />
-              Saturday: 8:00 AM - 4:00 PM
+              Monday - Saturday: 8:00 AM - 5:00 PM
               <br />
               Sunday: Closed
             </Typography>
+          </Box>
+
+          <Box sx={{ flex: 1 }}>
+            <Typography variant="h6" gutterBottom>
+              Socials
+            </Typography>
+            <a href="https://www.instagram.com/nuthatchpandd/">
+              <img src={InstagramIcon} width={40} height={40} />
+            </a>
           </Box>
         </Stack>
         <Divider sx={{ mt: 4, mb: 2, bgcolor: "rgba(255,255,255,0.2)" }} />
