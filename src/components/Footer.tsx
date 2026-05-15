@@ -50,7 +50,7 @@ export function Footer() {
                 iconSrc={InstagramIcon}
               />
               <SocialLink
-                link="https://www.tiktok.com/nuthatchpandd/"
+                link="https://www.tiktok.com/@nuthatchpandd/"
                 iconSrc={TikTokIcon}
               />
             </Stack>
