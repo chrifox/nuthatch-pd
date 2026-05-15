@@ -1,16 +1,20 @@
 import { Typography, Container, Box, Stack, Divider } from "@mui/material";
 
-import InstagramIcon from "../assets/Instagram_icon.png";
+import FacebookIcon from "../assets/socials/Facebook_icon.png";
+import InstagramIcon from "../assets/socials/Instagram_icon.png";
+import TikTokIcon from "../assets/socials/TikTok_icon.png";
+
+import { SocialLink } from "./common/SocialLink";
 
 export function Footer() {
   return (
-    <Box sx={{ bgcolor: "text.primary", color: "white", py: 4 }}>
+    <Box sx={{ bgcolor: "text.primary", color: "white", py: 2 }}>
       <Container maxWidth="md">
-        <Divider sx={{ mb: 4, bgcolor: "rgba(255,255,255,0.2)" }} />
         <Stack
           direction={{ xs: "column", md: "row" }}
           spacing={4}
           justifyContent="space-between"
+          sx={{ pt: 1 }}
         >
           <Box sx={{ flex: 1 }}>
             <Typography variant="h6" gutterBottom>
@@ -36,12 +40,23 @@ export function Footer() {
             <Typography variant="h6" gutterBottom>
               Socials
             </Typography>
-            <a href="https://www.instagram.com/nuthatchpandd/">
-              <img src={InstagramIcon} width={40} height={40} />
-            </a>
+            <Stack direction="row" spacing={1.5}>
+              <SocialLink
+                link="https://www.facebook.com/nuthatchpandd/"
+                iconSrc={FacebookIcon}
+              />
+              <SocialLink
+                link="https://www.instagram.com/nuthatchpandd/"
+                iconSrc={InstagramIcon}
+              />
+              <SocialLink
+                link="https://www.tiktok.com/nuthatchpandd/"
+                iconSrc={TikTokIcon}
+              />
+            </Stack>
           </Box>
         </Stack>
-        <Divider sx={{ mt: 4, mb: 2, bgcolor: "rgba(255,255,255,0.2)" }} />
+        <Divider sx={{ my: 2, bgcolor: "rgba(255,255,255,0.2)" }} />
         <Typography
           variant="body2"
           textAlign="center"
